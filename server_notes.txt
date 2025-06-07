@@ -1,0 +1,9 @@
+
+in backend, always use .js after every import
+
+since we are making a conversation model, that has only 2 members
+the getConversation controller won't work for group chats
+
+when we send the request to mongoose in getConversation, 
+it will return the first conversation it finds 
+even if it has users, other than the sender and receiver
