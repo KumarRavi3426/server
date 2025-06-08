@@ -4,10 +4,8 @@ import { configDotenv } from 'dotenv';
 configDotenv();
 
 const Connection = async()=>{
-    const username = process.env.DB_USERNAME;
-    const password = process.env.DB_PASSWORD;
 
-    const URL = `mongodb+srv://${username}:${password}@nodetuts.syfifvs.mongodb.net/chat?retryWrites=true&w=majority&appName=nodetuts`;
+    const URL = process.env.DB_URI;
     try {
         await mongoose.connect(URL, {useUnifiedTopology: true})
         console.log("Connected to db successfully")

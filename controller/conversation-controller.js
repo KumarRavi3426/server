@@ -5,7 +5,8 @@ export const newConversation = async(req, res)=>{
         let senderId = req.body.senderId;
         let receiverId = req.body.receiverId;
         const exist = await Conversation.find({members: {$all: [senderId, receiverId]}})
-
+        
+        // didn't use exist, because even if empty, it will return an array of length 0
         if(exist.length > 0){
             res.status(200).json('conversation already exists');
             return;
