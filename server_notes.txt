@@ -1,5 +1,6 @@
 
 in backend, always use .js after every import
+when importing a package always use "", see name from package.json
 
 since we are making a conversation model, that has only 2 members
 the getConversation controller won't work for group chats
@@ -7,3 +8,31 @@ the getConversation controller won't work for group chats
 when we send the request to mongoose in getConversation, 
 it will return the first conversation it finds 
 even if it has users, other than the sender and receiver
+
+files are uploaded in binary format, using new FormData()
+
+
+
+Doubts:--
+utils/ upload.js
+streaming, pipelining concept in image-controller when getting image chunks
+client/utils/common-utils   downloadMedia
+
+in socket index.js
+
+socket when useEffect (empty dependency array) is called, it will run only once, but it works all the time
+Messages.jsx _ Line:38
+
+
+
+Changes:--
+i have changed upload.js file, and removed bucket name
+
+
+
+Things to do:_--
+
+mic, emoji
+user status
+typing status
+group chat
