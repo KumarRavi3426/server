@@ -17,6 +17,10 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/', route);
 
+app.get("/", (req, res)=>{
+    res.send('<p>Welcome to Chat App</p>')
+})
+
 app.listen(PORT, ()=>{
     console.log(`Server listening on PORT ${PORT}`)
 })
