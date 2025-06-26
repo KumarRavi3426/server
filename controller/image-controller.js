@@ -1,6 +1,8 @@
 import mongoose from "mongoose"
 import grid from "gridfs-stream"
+import dotenv from "dotenv";
 
+dotenv.config();
 
 const url = process.env.BACKEND_URL
 
