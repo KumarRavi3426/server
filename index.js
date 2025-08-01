@@ -1,9 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
 
 import Connection from './database/db.js';
 import route from './routes/route.js';
+
+dotenv.config();    
+// here it will work without this because, dotenv.config() is called in Connection() function
+// So once dotenv.config() is instantiated globally in the project
 
 const app = express();
 const PORT = process.env.PORT || 8000;
